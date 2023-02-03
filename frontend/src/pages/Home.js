@@ -28,25 +28,7 @@ const Home = () => {
     <>
     <div class="page-container">
       <Sidebar />
-      <div class="main-content">
-        <Header />
-        <Breadcrumb />
-        <Dashboard />
-        <Footer />
-        <OffsetArea />
-      {/* <div className="container-fluid page-body-wrapper"> */}
-      {/* <div className="page-body-wrapper">
-        <Topbar />
-        
-        <div className="main-panel">
-        <div className="content-wrapper">
-          <Dashboard />
-        </div> 
-
-        <Footer /> 
-      </div>
-      </div>*/}
-      </div>
+      {/* The other contents here */}
     </div>
 
       {/* <GetArticles articles={articles} /> */}

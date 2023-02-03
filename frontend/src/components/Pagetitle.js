@@ -1,6 +1,8 @@
-import React from 'react'
+import React from 'react';
 
 const Pagetitle = () => {
+//   let {user, logoutUser} = useContext(AuthContext);
+
   return (
     <>
     <div className="page-title-area">
@@ -17,11 +19,15 @@ const Pagetitle = () => {
           <div className="col-sm-6 clearfix">
               <div className="user-profile pull-right">
                   <img className="avatar user-thumb" src="assets/images/author/avatar.png" alt="avatar" />
-                  <h4 className="user-name dropdown-toggle" data-toggle="dropdown">Kumkum Rai <i className="fa fa-angle-down"></i></h4>
+                  <h4 className="user-name dropdown-toggle" data-toggle="dropdown">Name<i className="fa fa-angle-down"></i></h4>
                   <div className="dropdown-menu">
                       <a className="dropdown-item" href="#">Message</a>
-                      <a className="dropdown-item" href="#">Settings</a>
-                      <a className="dropdown-item" href="#">Log Out</a>
+                      <a className="dropdown-item" href="#">Sengs</a>
+                      {/* {user ? (
+                        <a className="dropdown-item" href="#">Log Out</a>
+                        ) : (
+                        <Link to="/login" className="btn btn-secondary-outline">Login</Link>
+                      )} */}
                   </div>
               </div>
           </div>

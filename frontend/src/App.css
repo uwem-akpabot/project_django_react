@@ -1,0 +1,7 @@
+.otherlinks{
+    color: #ccc !important
+}
+.otherlinks:hover{
+    cursor: pointer;
+    color: #fff !important
+}

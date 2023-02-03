@@ -16,6 +16,7 @@ import Admin from './pages/Admin';
 import RegisterPage from './pages/RegisterPage';
 // import Footer from './components/Footer';
 import Doctor from "./pages/Doctor";
+import PatientsList from "./pages/patients/PatientsList";
 
 function App() {
   const caption = 'Project';
@@ -29,6 +30,9 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
+            {/* Patients Portal */}
+            <Route path="/patients-info" element={<PatientsList />} />
+
             <Route path="/admin" element={<Admin />} />
             <Route path="/doctor" element={<Doctor />} />
             <Route path="*" element={<main style={{ padding: "1rem" }}>
