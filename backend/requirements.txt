@@ -1,5 +1,5 @@
 django
-pip install djangorestframework
-pip install djangorestframework-simplejwt
-pip install django-cors-headers
+djangorestframework
+djangorestframework-simplejwt
+django-cors-headers
 mysqlclient
