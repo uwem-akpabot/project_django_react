@@ -7,22 +7,34 @@ import Header from '../components/Header';
 import OffsetArea from '../components/OffsetArea';
 import Breadcrumb from '../components/Breadcrumb';
 import Dashboard from './Dashboard';
-import PatientsList from '../pages/patients/PatientsList';
+// import PatientsAdd from '../pages/patients/PatientsAdd';
+// AppPostForm
+import PatientsList from '../pages/patients/ManagePatients';
 import LabResults from '../pages/patients/LabResults';
 import Prescriptions from '../pages/patients/Prescriptions';
 import BookAppointment from '../pages/patients/BookAppointment';
 import MedicalRecords from '../pages/patients/MedicalRecords';
+// import AppPostForm from '../pages/patients/AppPostForm';
+import AddPatient from '../pages/patients/AddPatient';
+import ManagePatients from '../pages/patients/ManagePatients';
 
 const Sidebar = () => {
     let {user, logoutUser} = useContext(AuthContext);
 
     const [check, setCheck] = useState(null);
 
+    if (check == null){
+        setCheck(<Dashboard />);
+    }
+
     const dashboard = () => {
         setCheck(<Dashboard />);
     } 
-    const patientList = () => {
-        setCheck(<PatientsList />);
+    const addPatient = () => {
+        setCheck(<AddPatient />);
+    }
+    const managePatients = () => {
+        setCheck(<ManagePatients />);
     }
     const labResults = () => {
         setCheck(<LabResults />);
@@ -52,9 +64,8 @@ const Sidebar = () => {
                         <li className="">
                             <a onClick={dashboard} className="otherlinks"> <i className="ti-map-alt"></i> <span>Dashboard</span></a>
                         </li>
-
-                        <li><a onClick={patientList} className="otherlinks">Patient Info</a></li>
-                     
+                        <li><a onClick={addPatient} className="otherlinks"><i className="fa fa-ambulance"></i><span> Add Patient</span></a></li>
+                        <li><a onClick={managePatients} className="otherlinks"><i className="ti-palette"></i><span> Manage Patients</span></a></li>                 
                         <li>
                             <a href="javascript:void(0)" aria-expanded="true"><i className="fa fa-ambulance"></i> 
                             <span>Patients' Management</span></a>
@@ -62,7 +73,8 @@ const Sidebar = () => {
                                 <li><a href="javascript:void(0)" aria-expanded="true">
                                     <i className="fa fa-user"></i><span>Patients Portal</span></a>
                                     <ul className="collapse">
-                                        <li><a onClick={patientList} className="otherlinks">Patient Info</a></li>
+                                        <li><a onClick={addPatient} className="otherlinks">Add Patient</a></li>
+                                        <li><a onClick={managePatients} className="otherlinks">Manage Patients</a></li>
                                         <li><a onClick={labResults} className="otherlinks">Lab Results</a></li>
                                         <li><a onClick={prescriptions} className="otherlinks">Prescriptions</a></li>
                                         <li><a onClick={bookAppointment} className="otherlinks">Appointment</a></li>
@@ -170,7 +182,7 @@ const Sidebar = () => {
     <div class="main-content">
         <Header />
         <Breadcrumb />
-        
+
         {check}
 
         <Footer />

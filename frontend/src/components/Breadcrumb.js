@@ -1,5 +1,5 @@
-import React, { useState, useContext } from 'react'
-import { Outlet, Link } from 'react-router-dom';
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom';
 import AuthContext from '../context/AuthContext';
 
 const Breadcrumb = () => {
@@ -21,7 +21,10 @@ const Breadcrumb = () => {
             <div className="col-sm-6 clearfix">
                 <div className="user-profile pull-right bg-indigo">
                     <img className="avatar user-thumb" src="assets/images/author/avatar.png" alt="avatar" />
-                    <h4 className="user-name dropdown-toggle text-capitalize" data-toggle="dropdown">{user.username} <i className="fa fa-angle-down"></i></h4>
+                    <h4 className="user-name dropdown-toggle text-capitalize" data-toggle="dropdown">
+                    
+                       {user && <>Hello, {user.username}</>} <i className="fa fa-angle-down"></i></h4>
+
                     <div className="dropdown-menu">
                         <a className="dropdown-item" href="#">Message</a>
                         <a className="dropdown-item" href="#">Settings</a>

@@ -5,9 +5,11 @@ import './App.css';
 import Frontpage from "./pages/Frontpage";
 import LoginPage from './pages/LoginPage';
 import Dashboard from './pages/Dashboard';
+import Home from './pages/Home';
+import AddPatient from "./pages/patients/AddPatient";
+import ManagePatients from "./pages/patients/ManagePatients";
 // import Sidebar from './components/Sidebar';
 // import Nav from './components/Nav';
-import Home from './pages/Home';
 import Admin from './pages/Admin';
 // import Laboratory from './pages/Laboratory';
 // import Consulting from './pages/Consulting';
@@ -16,7 +18,7 @@ import Admin from './pages/Admin';
 import RegisterPage from './pages/RegisterPage';
 // import Footer from './components/Footer';
 import Doctor from "./pages/Doctor";
-import PatientsList from "./pages/patients/PatientsList";
+import Sidebar from "./components/Sidebar";
 
 function App() {
   const caption = 'Project';
@@ -27,17 +29,17 @@ function App() {
       <AuthProvider>
         <Routes>
           <Route exact path="/" element={<Frontpage />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/register" element={<RegisterPage />} />
-            {/* Patients Portal */}
-            <Route path="/patients-info" element={<PatientsList />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/add-patient" element={<AddPatient />} />
+          <Route path="/manage-patients" element={<ManagePatients />} />
 
-            <Route path="/admin" element={<Admin />} />
-            <Route path="/doctor" element={<Doctor />} />
-            <Route path="*" element={<main style={{ padding: "1rem" }}>
-                <h3>Error 404! Page doesn't exist</h3><p>Oops! You landed on a page that does not exist</p></main>}
-            />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/doctor" element={<Doctor />} />
+          <Route path="*" element={<main style={{ padding: "1rem" }}>
+              <h3>Error 404! Page doesn't exist</h3><p>Oops! You landed on a page that does not exist</p></main>}
+          />
           
           <Route element={<PrivateRoutes />}>
             {/* <Route exact path="/" element={<HomePage caption={caption} />} /> */}

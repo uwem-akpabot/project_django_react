@@ -39,8 +39,8 @@ GET ALL PATIENTS
 @permission_classes([IsAuthenticated])
 def getPatients(request):
     user = request.user
-    patients = user.patient_set.all()
-    # patients = Patient.objects.all()
+    # patients = user.patient_set.all()
+    patients = Patient.objects.all()
     serializer = PatientSerializer(patients, many=True) 
     return Response(serializer.data)
 
@@ -64,9 +64,31 @@ CREATE NEW PATIENT
 def createPatient(request):
     user = request.user
     data = request.data #get the json data
+
     patient = Patient.objects.create(
-        body = data['body']
+        fname = data['fname'],
+        mname = data['mname'],
+        sname = data['sname'],
+        gender = data['gender'],
+        phone = data['phone'],
+        email = data['email'],
+        address = data['address'],
+        others = data['others']
+        # user_id = user
     )
+
+    # patient = user.patient_set.create(
+    #     fname = data['fname'],
+    #     mname = data['mname'],
+    #     sname = data['sname'],
+    #     gender = data['gender'],
+    #     phone = data['phone'],
+    #     email = data['email'],
+    #     address = data['address'],
+    #     others = data['others'],
+    #     user_id = user
+    # )
+
     # patient = user.patient_set.create(
     #     body = data['body']
     # )
