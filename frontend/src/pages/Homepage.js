@@ -1,6 +1,6 @@
 import { Outlet, Link } from 'react-router-dom';
 
-const Frontpage = () => {
+const Homepage = () => {
   return (
     <div>
         <Link to="/">Home</Link>
@@ -13,5 +13,4 @@ const Frontpage = () => {
     </div>
   )
 }
-
-export default Frontpage
+export default Homepage

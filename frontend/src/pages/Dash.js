@@ -1,8 +1,43 @@
-import Pagetitle from "./Pagetitle"
+import React, { useState, useEffect, useContext } from 'react';
+import AuthContext from '../context/AuthContext';
+// import Header from '../components/Header';
 
-const Dashboard = () => {
+const Dash = (props) => {
+  let [notes, setNotes] = useState([])
+  let {authTokens, logoutUser} = useContext(AuthContext)
+  
+  let {user} = useContext(AuthContext);
+  const pageTitle = 'Dashboard';
+  
+  useEffect(() => {
+    getPatients()
+  }, [])
+
+  let getPatients = async() => {
+    let response = await fetch('http://localhost:8000/api/patients/', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer '+ String(authTokens.access)
+      }
+    })
+    let data = await response.json()
+
+    if (response.status === 200){
+      setNotes(data)
+    } else if (response.status === 'Unauthorized'){
+      logoutUser()
+    }
+  }
+
   return (
     <>
+    {/* {user && <p>Hello {user.username}</p>}
+              
+              { notes.map(note => (
+                <li key={note.id}>{note.body}</li>
+              ))} */}
+              
     <div className="main-content-inner check">
         <div className="row">
             <div className="col-lg-8">
@@ -127,5 +162,4 @@ const Dashboard = () => {
     </>
   )
 }
-
-export default Dashboard
+export default Dash

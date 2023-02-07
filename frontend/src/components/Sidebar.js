@@ -1,60 +1,21 @@
-import React, { useState, useContext } from 'react'
-import { Outlet, Link } from 'react-router-dom';
+import React, { useContext } from 'react';
 import AuthContext from '../context/AuthContext';
-import logo from './../images/logo.png';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
-import OffsetArea from '../components/OffsetArea';
-import Breadcrumb from '../components/Breadcrumb';
-import Dashboard from './Dashboard';
-// import PatientsAdd from '../pages/patients/PatientsAdd';
-// AppPostForm
-import PatientsList from '../pages/patients/ManagePatients';
-import LabResults from '../pages/patients/LabResults';
-import Prescriptions from '../pages/patients/Prescriptions';
-import BookAppointment from '../pages/patients/BookAppointment';
-import MedicalRecords from '../pages/patients/MedicalRecords';
-// import AppPostForm from '../pages/patients/AppPostForm';
-import AddPatient from '../pages/patients/AddPatient';
-import ManagePatients from '../pages/patients/ManagePatients';
+import { Outlet, Link } from 'react-router-dom';
+import Header from './Header';
+import Breadcrumb from './Breadcrumb';
+import OffsetArea from './OffsetArea';
+import Footer from './Footer';
 
 const Sidebar = () => {
-    let {user, logoutUser} = useContext(AuthContext);
-
-    const [check, setCheck] = useState(null);
-
-    if (check == null){
-        setCheck(<Dashboard />);
-    }
-
-    const dashboard = () => {
-        setCheck(<Dashboard />);
-    } 
-    const addPatient = () => {
-        setCheck(<AddPatient />);
-    }
-    const managePatients = () => {
-        setCheck(<ManagePatients />);
-    }
-    const labResults = () => {
-        setCheck(<LabResults />);
-    } 
-    const prescriptions = () => {
-        setCheck(<Prescriptions />);
-    }
-    const bookAppointment = () => {
-        setCheck(<BookAppointment />);
-    } 
-    const medicalRecords = () => {
-        setCheck(<MedicalRecords />);
-    }
-
-    return (
+  let {authTokens, logoutUser} = useContext(AuthContext)
+  let {user} = useContext(AuthContext);
+  
+  return (
     <>
     <div className="sidebar-menu">
         <div className="sidebar-header">
             <div className="logo">
-                <a href=""><img src={logo} alt="logo" style={{ width:"89%" }} /></a> 
+                {/* <a href=""><img src={logo} alt="logo" style={{ width:"89%" }} /></a>  */}
             </div>
         </div>
         <div className="main-menu">
@@ -62,10 +23,10 @@ const Sidebar = () => {
                 <nav>
                     <ul className="metismenu" id="menu">
                         <li className="">
-                            <a onClick={dashboard} className="otherlinks"> <i className="ti-map-alt"></i> <span>Dashboard</span></a>
+                            <Link to="/dash" className="otherlinks"><i className="ti-map-alt"></i> <span>Dashboard</span></Link>
                         </li>
-                        <li><a onClick={addPatient} className="otherlinks"><i className="fa fa-ambulance"></i><span> Add Patient</span></a></li>
-                        <li><a onClick={managePatients} className="otherlinks"><i className="ti-palette"></i><span> Manage Patients</span></a></li>                 
+                        <li><Link to="/add-patient" className="otherlinks"><i className="fa fa-ambulance"></i><span> Add Patient</span></Link></li>
+                        <li><Link to="/manage-patients" className="otherlinks"><i className="ti-palette"></i><span> Manage Patients</span></Link></li>                 
                         <li>
                             <a href="javascript:void(0)" aria-expanded="true"><i className="fa fa-ambulance"></i> 
                             <span>Patients' Management</span></a>
@@ -73,22 +34,22 @@ const Sidebar = () => {
                                 <li><a href="javascript:void(0)" aria-expanded="true">
                                     <i className="fa fa-user"></i><span>Patients Portal</span></a>
                                     <ul className="collapse">
-                                        <li><a onClick={addPatient} className="otherlinks">Add Patient</a></li>
-                                        <li><a onClick={managePatients} className="otherlinks">Manage Patients</a></li>
-                                        <li><a onClick={labResults} className="otherlinks">Lab Results</a></li>
-                                        <li><a onClick={prescriptions} className="otherlinks">Prescriptions</a></li>
-                                        <li><a onClick={bookAppointment} className="otherlinks">Appointment</a></li>
-                                        <li><a onClick={medicalRecords} className="otherlinks">Medical Records</a></li>
+                                        <li><Link to="/add-patient" className="otherlinks">Add Patient</Link></li>
+                                        <li><Link to="/manage-patients" className="otherlinks">Manage Patients</Link></li>
+                                        <li><Link to="/" className="otherlinks">Lab Results</Link></li>
+                                        <li><Link to="/" className="otherlinks">Prescriptions</Link></li>
+                                        <li><Link to="/" className="otherlinks">Appointment</Link></li>
+                                        <li><Link to="/" className="otherlinks">Medical Records</Link></li>
                                     </ul>
                                 </li>
                                 <li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i className="ti-layout-sidebar-left"></i><span>
                                     Nursing </span></a>
                                     <ul className="collapse">
-                                        <li><Link to="/track-patient-vitals">Patient Vitals</Link></li>
-                                        <li><Link to="/order-lab-tests">Order LabTests</Link></li>
-                                        <li><Link to="/patient-medication">Patient Medication</Link></li>
-                                        <li><Link to="/refer-patient">Refer Patient</Link></li>
+                                        <li><Link to="/" className="otherlinks">Patient Vitals</Link></li>
+                                        <li><Link to="/" className="otherlinks">Order LabTests</Link></li>
+                                        <li><Link to="/" className="otherlinks">Patient Medication</Link></li>
+                                        <li><Link to="/" className="otherlinks">Refer Patient</Link></li>
                                     </ul>
                                 </li>
                                 <li><a href="javascript:void(0)" aria-expanded="true"><i className="ti-palette"></i><span>Laboratory</span></a>
@@ -164,7 +125,7 @@ const Sidebar = () => {
                             </ul>
                         </li>
                         <li className="">
-                            <a onClick={dashboard} className="otherlinks"> <i className="ti-settings"></i> <span>Settings</span></a>
+                            <Link to="/" className="otherlinks"><i className="ti-settings"></i> <span>Settings</span></Link>
                         </li>
                         <li className="">
                             {user ? (
@@ -178,16 +139,17 @@ const Sidebar = () => {
             </div>
         </div>
     </div>
-
+    
     <div class="main-content">
         <Header />
         <Breadcrumb />
-
-        {check}
+        
+        <Outlet />
 
         <Footer />
         <OffsetArea />
     </div>
+    
     </>
   )
 }

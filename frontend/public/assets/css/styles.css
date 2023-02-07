@@ -132,13 +132,13 @@
 }
 
 .menu-inner {
-    overflow-y: scroll;
-    height: 100%;
+    /* overflow-y: scroll;
+    height: 100%; */
 }
 
 .slimScrollBar {
-    background: #2942fa!important;
-    opacity: 0.1!important;
+    /* background: #2942fa!important;
+    opacity: 0.1!important; */
 }
 
 .sidebar-header {
