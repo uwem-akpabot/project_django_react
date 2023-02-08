@@ -1650,24 +1650,27 @@ table.dbkit-table tr td {
 
 .according .card-header a {
     display: block;
-    background: #EFF3F6;
+    background: #461360;
     padding: 16px 15px;
     border-radius: 3px;
-    color: #444;
+    color: #ddd;
     letter-spacing: 0;
     font-size: 15px;
     font-weight: 500;
+    font-family: 'lato', sans-serif;
 }
 
 .according .card-body {
     padding: 10px;
-    border: 1px solid #eff3f6;
+    border: none;
     font-size: 14px;
     letter-spacing: 0;
-    color: #444;
+    color: #ddd;
     line-height: 27px;
     font-weight: 400;
 }
+
+.card-body a{ font-family: 'lato', sans-serif !important}
 
 .according .card-header a {
     position: relative;
@@ -1686,8 +1689,6 @@ table.dbkit-table tr td {
     font-size: 26px;
 }
 
-
-
 /* accordion-3 */
 
 .accordion-s3 .card-header a.collapsed:before {
@@ -1699,8 +1700,15 @@ table.dbkit-table tr td {
     font-family: 'themify';
     position: absolute;
     right: 13px;
-    color: #444;
+    color: #ddd;
     font-size: 15px;
+}
+
+.nosign a:before{
+    content: "" !important;
+}
+.nosign a:hover{
+    text-decoration: none;
 }
 
 .gradiant-bg .card-header a {

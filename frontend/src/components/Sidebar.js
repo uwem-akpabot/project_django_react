@@ -5,6 +5,7 @@ import Header from './Header';
 import Breadcrumb from './Breadcrumb';
 import OffsetArea from './OffsetArea';
 import Footer from './Footer';
+import logo from './../images/logo.png'
 
 const Sidebar = () => {
   let {authTokens, logoutUser} = useContext(AuthContext)
@@ -12,144 +13,102 @@ const Sidebar = () => {
   
   return (
     <>
-    <div className="sidebar-menu">
-        <div className="sidebar-header">
-            <div className="logo">
-                {/* <a href=""><img src={logo} alt="logo" style={{ width:"89%" }} /></a>  */}
+    <div class="page-container">
+        <div className="sidebar-menu">
+            <div className="sidebar-header">
+                <div className="logo">
+                    <a href=""><img src={logo} alt="logo" style={{ width:"89%" }} /></a>
+                </div>
             </div>
-        </div>
-        <div className="main-menu">
-            <div className="menu-inner">
-                <nav>
-                    <ul className="metismenu" id="menu">
-                        <li className="">
-                            <Link to="/dash" className="otherlinks"><i className="ti-map-alt"></i> <span>Dashboard</span></Link>
-                        </li>
-                        <li><Link to="/add-patient" className="otherlinks"><i className="fa fa-ambulance"></i><span> Add Patient</span></Link></li>
-                        <li><Link to="/manage-patients" className="otherlinks"><i className="ti-palette"></i><span> Manage Patients</span></Link></li>                 
-                        <li>
-                            <a href="javascript:void(0)" aria-expanded="true"><i className="fa fa-ambulance"></i> 
-                            <span>Patients' Management</span></a>
-                            <ul className="collapse">
-                                <li><a href="javascript:void(0)" aria-expanded="true">
-                                    <i className="fa fa-user"></i><span>Patients Portal</span></a>
-                                    <ul className="collapse">
-                                        <li><Link to="/add-patient" className="otherlinks">Add Patient</Link></li>
-                                        <li><Link to="/manage-patients" className="otherlinks">Manage Patients</Link></li>
-                                        <li><Link to="/" className="otherlinks">Lab Results</Link></li>
-                                        <li><Link to="/" className="otherlinks">Prescriptions</Link></li>
-                                        <li><Link to="/" className="otherlinks">Appointment</Link></li>
-                                        <li><Link to="/" className="otherlinks">Medical Records</Link></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i className="ti-layout-sidebar-left"></i><span>
-                                    Nursing </span></a>
-                                    <ul className="collapse">
-                                        <li><Link to="/" className="otherlinks">Patient Vitals</Link></li>
-                                        <li><Link to="/" className="otherlinks">Order LabTests</Link></li>
-                                        <li><Link to="/" className="otherlinks">Patient Medication</Link></li>
-                                        <li><Link to="/" className="otherlinks">Refer Patient</Link></li>
-                                    </ul>
-                                </li>
-                                <li><a href="javascript:void(0)" aria-expanded="true"><i className="ti-palette"></i><span>Laboratory</span></a>
-                                    <ul className="collapse">
-                                        <li><a href="" className="otherlinks">Item One</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="javascript:void(0)" aria-expanded="true">
-                                    <i className="fa fa-table"></i><span>Pharmacy</span></a>
-                                    <ul className="collapse">
-                                        <li><a href="" className="otherlinks">Item One</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="javascript:void(0)" aria-expanded="true">
-                                    <i className="ti-pie-chart"></i><span>Doctor</span></a>
-                                    <ul className="collapse">
-                                        <li><a href="" className="otherlinks">Item One</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="javascript:void(0)" aria-expanded="true">
-                                    <i className="ti-slice"></i><span>Administrator</span></a>
-                                    <ul className="collapse">
-                                        <li><a href="" className="otherlinks">Item One</a></li>
-                                    </ul>
-                                </li>            
-                                
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)" aria-expanded="true"><i className="ti-layers-alt"></i> <span>Inventory</span></a>
-                            <ul className="collapse">
-                                <li><Link to="/">Item level (1)</Link></li>
-                                <li><Link to="/">Item level (1)</Link></li>
-                                <li><Link to="/" aria-expanded="true">Item level (1)</Link>
-                                    <ul className="collapse">
-                                        <li><Link to="/">Item level (2)</Link></li>
-                                        <li><Link to="/">Item level (2)</Link></li>
-                                        <li><Link to="/">Item level (2)</Link></li>
-                                    </ul>
-                                </li>
-                                <li><Link to="/">Item level (1)</Link></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)" aria-expanded="true"><i className="fa fa-calculator"></i> <span>Billing</span></a>
-                            <ul className="collapse">
-                                <li><Link to="/">Item level (1)</Link></li>
-                                <li><Link to="/">Item level (1)</Link></li>
-                                <li><Link to="/" aria-expanded="true">Item level (1)</Link>
-                                    <ul className="collapse">
-                                        <li><Link to="/">Item level (2)</Link></li>
-                                        <li><Link to="/">Item level (2)</Link></li>
-                                        <li><Link to="/">Item level (2)</Link></li>
-                                    </ul>
-                                </li>
-                                <li><Link to="/">Item level (1)</Link></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)" aria-expanded="true"><i className="fa fa-globe"></i> 
-                            <span>More Tools</span></a>
-                            <ul className="collapse">
-                                <li><Link to="/">Item level (1)</Link></li>
-                                <li><Link to="/">Item level (1)</Link></li>
-                                <li><Link to="/" aria-expanded="true">Item level (1)</Link>
-                                    <ul className="collapse">
-                                        <li><Link to="/">Item level (2)</Link></li>
-                                        <li><Link to="/">Item level (2)</Link></li>
-                                        <li><Link to="/">Item level (2)</Link></li>
-                                    </ul>
-                                </li>
-                                <li><Link to="/">Item level (1)</Link></li>
-                            </ul>
-                        </li>
-                        <li className="">
-                            <Link to="/" className="otherlinks"><i className="ti-settings"></i> <span>Settings</span></Link>
-                        </li>
-                        <li className="">
-                            {user ? (
-                            <button onClick={logoutUser} className="btn btn-danger ml-4 mt-3">Log Out</button>
-                            ) : (
-                            <Link to="/login" className="btn btn-secondary-outline">Login</Link>
-                            )}
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </div>
-    
-    <div class="main-content">
-        <Header />
-        <Breadcrumb />
-        
-        <Outlet />
+            <div className="main-menu">
+                <div className="menu-inner">
+                    <nav>
+                        <ul id="menu">
+                            <div id="accordion4" class="according accordion-s3">
+                                <div class="card-header nosign">
+                                    <Link to="/dash" href="#accordion40">
+                                    <i className="fa fa-ambulance"></i> &nbsp; Dashboard</Link>
+                                </div>
 
-        <Footer />
-        <OffsetArea />
+
+
+                                <div class="card-header">
+                                    <a class="card-link" data-toggle="collapse" href="#accordion41">
+                                    <i className="fa fa-ambulance"></i> &nbsp; Patients</a>
+                                </div>
+                                <div id="accordion41" class="collapse show" data-parent="#accordion4">
+                                    <div class="card-body">
+                                        <ul>
+                                            <li><Link to="/add-patient" className="otherlinks">Add Patient</Link></li>
+                                            <li><Link to="/manage-patients" className="otherlinks">Manage Patients</Link></li>
+                                            <li><Link to="/" className="otherlinks">Appointment</Link></li>
+                                            <li><Link to="/" className="otherlinks">Medical Records</Link></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-header">
+                                    <a class="collapsed card-link" data-toggle="collapse" href="#accordion42">
+                                    <i className="ti-palette"></i> &nbsp; Nursing</a>
+                                </div>
+                                <div id="accordion42" class="collapse" data-parent="#accordion4">
+                                    <div class="card-body">
+                                        <ul>
+                                            <li><Link to="/" className="otherlinks">Patient Vitals</Link></li>
+                                            <li><Link to="/" className="otherlinks">Order LabTests</Link></li>
+                                            <li><Link to="/" className="otherlinks">Refer Patient</Link></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-header">
+                                    <a class="collapsed card-link" data-toggle="collapse" href="#accordion43">
+                                    <i className="fa fa-flask"></i> &nbsp; Laboratory</a>
+                                </div>
+                                <div id="accordion43" class="collapse" data-parent="#accordion4">
+                                    <div class="card-body">
+                                        <ul>
+                                            <li><Link to="/" className="otherlinks">Lab Results</Link></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-header">
+                                    <a class="collapsed card-link" data-toggle="collapse" href="#accordion44">
+                                    <i className="fa fa-medkit"></i> &nbsp; Pharmacy</a>
+                                </div>
+                                <div id="accordion44" class="collapse" data-parent="#accordion4">
+                                    <div class="card-body">
+                                        <ul>
+                                            <li><Link to="/" className="otherlinks">Patient Medication</Link></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-header">
+                                    <a class="collapsed card-link" data-toggle="collapse" href="#accordion45">
+                                    <i className="fa fa-stethoscope"></i> &nbsp; Doctor</a>
+                                </div>
+                                <div id="accordion45" class="collapse" data-parent="#accordion4">
+                                    <div class="card-body">
+                                        <ul>
+                                            <li><Link to="/" className="otherlinks">Prescriptions</Link></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <Header />
+            <Breadcrumb />
+            
+            <Outlet />
+
+            <Footer />
+            <OffsetArea />
+        </div>
     </div>
-    
     </>
   )
 }

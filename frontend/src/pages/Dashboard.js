@@ -4,9 +4,9 @@ import Sidebar from "../components/Sidebar";
 const Dashboard = () => {
   return (
     <>
-    {/* free pg to send props and other general info to loggedin components */}
-
-    <Sidebar />
+      {/* free pg to send props and other general info to loggedin components */}
+    
+      <Sidebar />
     </>
   )
 }
