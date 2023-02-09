@@ -37,7 +37,7 @@ const AddPatient = () => {
     const successAlert = (response) => {
         return(
           swal({
-              title: "Info!",
+              title: "Saved successfully!",
               text: response.data.message,
               icon: "success"
           }).then(function() {
@@ -70,27 +70,25 @@ const AddPatient = () => {
 
                         <div className="form-row">
                             <div className="col-md-4 mb-3">
-                                <label for="validationCustom01">First Name</label>
+                                <label for="validationCustom01">First Name *</label>
                                 <input type="text" name="fname" className="form-control" id="validationCustom01" placeholder="First name" 
                                     {...register("fname", { required: true })}
                                     required />
-                                    {errors.fname && <small className="text-red-500 text-xs italic">First name is required</small>}
+                                    {errors.fname && <small className="text-danger text-xs font-italic">First name is required</small>}
                             </div>
                             <div className="col-md-4 mb-3">
-                                <label for="validationCustom02">Surname</label>
+                                <label for="validationCustom02">Surname *</label>
                                 <input type="text" name="sname" className="form-control" id="validationCustom02" placeholder="Surname" 
                                     {...register("sname", { required: true })}
                                     required />
-                                {errors.sname && <small className="text-red-500 text-xs italic">Surname is required</small>}
+                                {errors.sname && <small className="text-danger text-xs font-italic">Surname is required</small>}
                             </div>
                             <div className="col-md-4 mb-3">
-                                <label for="validationCustom02">Clinic No.</label>
+                                <label for="validationCustom02">Clinic No. *</label>
                                 <input type="text" name="clinic_no" className="form-control" id="validationCustom02" placeholder="Clinic number" 
                                     {...register("clinic_no", { required: true })}
                                     required />
-                                <div className="valid-feedback">
-                                    {errors.clinic_no && <small className="text-red-500 text-xs italic">Clinic number is required</small>}
-                                </div>
+                                {errors.clinic_no && <small className="text-danger text-xs font-italic">Clinic number is required</small>}
                             </div>
                         </div>
                         <div className="form-row">

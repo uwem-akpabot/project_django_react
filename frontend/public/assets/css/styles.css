@@ -460,7 +460,8 @@ h4{
 }
 
 .form-row input[type="text"]{
-    background: #F3F8FB !important;
+    /* background: #F3F8FB !important; */
+    border:1px solid #888
 }
 
 .search-box input::-webkit-input-placeholder {

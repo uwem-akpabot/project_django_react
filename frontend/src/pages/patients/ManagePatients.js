@@ -40,8 +40,8 @@ const PatientsList = () => {
                         <div className="single-table">
                             <div className="table-responsive">
                                 <table className="table table-hover progress-table">
-                                    <thead className="text-uppercase">
-                                        <tr>
+                                    <thead className="text-uppercase bg-dark">
+                                        <tr class="text-white">
                                             <th scope="col">ID</th>
                                             <th scope="col">First Name</th>
                                             <th scope="col">Last Name</th>
