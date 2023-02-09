@@ -90,6 +90,7 @@
 
 .main-content {
     width: 100%;
+    min-height: 90vh !important;
     background: #F3F8FB;
 }
 
@@ -456,6 +457,10 @@ h4{
     padding-right: 40px;
     letter-spacing: 0;
     background: #f3eeff;
+}
+
+.form-row input[type="text"]{
+    background: #F3F8FB !important;
 }
 
 .search-box input::-webkit-input-placeholder {

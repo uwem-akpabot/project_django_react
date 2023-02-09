@@ -29,9 +29,6 @@ const Sidebar = () => {
                                     <Link to="/dash" href="#accordion40">
                                     <i className="fa fa-tachometer"></i> &nbsp; Dashboard</Link>
                                 </div>
-
-
-
                                 <div class="card-header">
                                     <a class="card-link" data-toggle="collapse" href="#accordion41">
                                     <i className="fa fa-ambulance"></i> &nbsp; Patients</a>
@@ -103,11 +100,12 @@ const Sidebar = () => {
             <Header />
             <Breadcrumb />
             
-            <Outlet />
+                <Outlet />
 
-            <Footer />
+            {/* <Footer /> */}
             <OffsetArea />
         </div>
+        <Footer />
     </div>
     </>
   )
