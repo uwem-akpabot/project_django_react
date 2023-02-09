@@ -67,13 +67,13 @@ def createPatient(request):
 
     patient = Patient.objects.create(
         fname = data['fname'],
-        mname = data['mname'],
         sname = data['sname'],
-        gender = data['gender'],
-        phone = data['phone'],
-        email = data['email'],
+        clinic_no = data['clinic_no'],
         address = data['address'],
-        others = data['others']
+        phone = data['phone'],
+        gender = data['gender'],
+        email = data['email'],
+        nextkin = data['nextkin']
         # user_id = user
     )
 

@@ -27,7 +27,7 @@ const Sidebar = () => {
                             <div id="accordion4" class="according accordion-s3">
                                 <div class="card-header nosign">
                                     <Link to="/dash" href="#accordion40">
-                                    <i className="fa fa-ambulance"></i> &nbsp; Dashboard</Link>
+                                    <i className="fa fa-tachometer"></i> &nbsp; Dashboard</Link>
                                 </div>
 
 
