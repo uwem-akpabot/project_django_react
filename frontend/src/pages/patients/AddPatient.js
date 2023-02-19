@@ -100,7 +100,7 @@ const AddPatient = () => {
                             <div className="col-md-3 mb-3">
                                 <label for="validationCustom04">Phone No.</label>
                                 <input type="text" name="phone" className="form-control" id="validationCustom04" placeholder="Phone number" 
-                                   maxLength="12" />
+                                   {...register("phone")} maxLength="12" />
                             </div>
                             {/* <div className="col-md-3 mb-3">
                                 <label for="validationCustom04">Gender *</label>

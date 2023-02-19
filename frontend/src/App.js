@@ -12,6 +12,7 @@ import AddPatient from "./pages/patients/AddPatient";
 import ManagePatients from "./pages/patients/ManagePatients";
 import AddSoapNote from "./pages/doctor/AddSoapNote";
 import LabRequestForm from "./pages/doctor/LabRequestForm";
+import ManageSoapNotes from "./pages/doctor/ManageSoapNotes";
 
 function App() {
   const company = "Beyond's Healthcare and Fertility Center"
@@ -36,6 +37,7 @@ function App() {
               <Route path="/add-patient" element={<AddPatient />} /> 
               <Route path="/manage-patients" element={<ManagePatients />} /> 
               <Route path="/add-soap-note" element={<AddSoapNote />} /> 
+              <Route path="/soapnotes" element={<ManageSoapNotes />} /> 
               <Route path="/lab-req-form-doctor" element={<LabRequestForm />} /> 
             </Route>
           </Route>

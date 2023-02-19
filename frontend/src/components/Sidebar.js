@@ -52,6 +52,7 @@ const Sidebar = () => {
                                     <div class="card-body">
                                         <ul>
                                             <li><Link to="/add-soap-note" className="otherlinks">Add SOAP Note</Link></li>
+                                            <li><Link to="/soapnotes" className="otherlinks">Manage SOAP Notes</Link></li>
                                             <li><Link to="/lab-req-form-doctor" className="otherlinks">Lab Request Form</Link></li>
                                         </ul>
                                     </div>

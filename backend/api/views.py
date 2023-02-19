@@ -130,15 +130,15 @@ def deletePatient(request, pk):
 """
 
 """
-GET SOAP NOTES FOR A SINGLE PATIENT
+GET ALL SOAP NOTES
 """
 @api_view(['GET'])
-# @permission_classes([IsAuthenticated])
-def getSoapNotes_SinglePatient(request, pk):
+@permission_classes([IsAuthenticated])
+def getSoapNotes(request):
     user = request.user
-    # patient = user.patient_set.get(id=pk)
-    soapnote = SoapNote.objects.get(id=pk)
-    serializer = SoapNoteSerializer(soapnote, many=False) 
+    # patient = user.patient_set.all()
+    soapnote = SoapNote.objects.all
+    serializer = SoapNoteSerializer(soapnote, many=True) 
     return Response(serializer.data)
 
 """
@@ -146,22 +146,21 @@ CREATE NEW SOAP NOTES
 """
 @api_view(['POST'])
 # @permission_classes([IsAuthenticated])
-def createSoapNote(request):
+def addSoapNote(request):
     user = request.user
     data = request.data #get the json data
 
-    patient = Patient.objects.create(
-        fname = data['fname'],
-        sname = data['sname'],
-        clinic_no = data['clinic_no'],
-        address = data['address'],
-        phone = data['phone'],
-        gender = data['gender'],
-        email = data['email'],
-        nextkin = data['nextkin']
+    soapnote = SoapNote.objects.create(
+        patient_id = data['patient'],
+        date_of_visit = data['date_of_visit'],
+        subjective = data['subjective'],
+        objective = data['objective'],
+        assessment = data['assessment'],
+        plan = data['plan'],
+        comment = data['comment']
         # user_id = user
     )
-    serializer = PatientSerializer(patient, many=False) 
+    serializer = SoapNoteSerializer(soapnote, many=False) 
     return Response(serializer.data)
 
 """

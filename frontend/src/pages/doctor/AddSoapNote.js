@@ -8,14 +8,13 @@ const AddSoapNote = () => {
     let formData = new FormData();
 
     const submitForm = (data) => {
-        formData.append('fname', data.fname)
-        formData.append('sname', data.sname)
-        formData.append('clinic_no', data.clinic_no);
-        formData.append('address', data.address);
-        formData.append('phone', data.phone);
-        formData.append('gender', data.gender);
-        formData.append('email', data.email);
-        formData.append('nextkin', data.nextkin);
+        formData.append('patient', data.patient)
+        formData.append('date_of_visit', data.date_of_visit)
+        formData.append('subjective', data.subjective);
+        formData.append('objective', data.objective);
+        formData.append('assessment', data.assessment);
+        formData.append('plan', data.plan);
+        formData.append('comment', data.comment);
 
         console.log('Getting set to post data')
         const requestOptions = {
@@ -24,7 +23,7 @@ const AddSoapNote = () => {
             }
         }
         axios.post(
-            `http://localhost:8000/api/patients/create/`,
+            `http://localhost:8000/api/soapnote/addsoapnote/`,
             formData,
             requestOptions
         ).then(res => res)
@@ -111,7 +110,7 @@ const AddSoapNote = () => {
                             </div>
                             <div className="col-md-6 mb-3">
                                 <label for="validationCustom01">Plan *</label>
-                                <textarea name="plan" className="form-control" id="validationCustom01" placeholder="plan" 
+                                <textarea name="plan" className="form-control" id="validationCustom01" placeholder="Plan" 
                                     {...register("plan", { required: true })} rows="5"
                                     required ></textarea>
                                     {errors.plan && <small className="text-danger text-xs font-italic">Plan is required</small>}
@@ -121,8 +120,8 @@ const AddSoapNote = () => {
                         <div className="form-row">
                             <div className="col-md-6 mb-3">
                                 <label for="validationCustom01">Other Comments</label>
-                                <textarea name="comments" className="form-control" id="validationCustom01" placeholder="Other Comments" 
-                                    {...register("comments")} rows="3"></textarea>
+                                <textarea name="comment" className="form-control" id="validationCustom01" placeholder="Other Comments" 
+                                    {...register("comment")} rows="3"></textarea>
                             </div>
                         </div>
 
