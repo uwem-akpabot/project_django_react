@@ -10,9 +10,11 @@ import Dash from "./pages/Dash";
 import Sidebar from "./components/Sidebar";
 import AddPatient from "./pages/patients/AddPatient";
 import ManagePatients from "./pages/patients/ManagePatients";
+import AddSoapNote from "./pages/doctor/AddSoapNote";
+import LabRequestForm from "./pages/doctor/LabRequestForm";
 
 function App() {
-  const caption = 'Project';
+  const company = "Beyond's Healthcare and Fertility Center"
 
   return (
     <>
@@ -20,7 +22,7 @@ function App() {
       <AuthProvider>
         <Routes>
           <Route exact path="/" element={<Homepage />} />
-          <Route path="/login" element={<LoginPage />} />
+          <Route path="/login" element={<LoginPage company={company} />} />
           <Route path="/register" element={<RegisterPage />} />
 
           <Route path="*" element={<main style={{ padding: "1rem" }}>
@@ -33,6 +35,8 @@ function App() {
               <Route path="/dash" element={<Dash />} /> 
               <Route path="/add-patient" element={<AddPatient />} /> 
               <Route path="/manage-patients" element={<ManagePatients />} /> 
+              <Route path="/add-soap-note" element={<AddSoapNote />} /> 
+              <Route path="/lab-req-form-doctor" element={<LabRequestForm />} /> 
             </Route>
           </Route>
         </Routes>

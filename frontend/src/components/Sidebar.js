@@ -38,11 +38,37 @@ const Sidebar = () => {
                                         <ul>
                                             <li><Link to="/add-patient" className="otherlinks">Add Patient</Link></li>
                                             <li><Link to="/manage-patients" className="otherlinks">Manage Patients</Link></li>
-                                            <li><Link to="/" className="otherlinks">Appointment</Link></li>
-                                            <li><Link to="/" className="otherlinks">Medical Records</Link></li>
+                                            {/* <li><Link to="/" className="otherlinks">Appointment</Link></li>
+                                            <li><Link to="/" className="otherlinks">Medical Records</Link></li> */}
                                         </ul>
                                     </div>
                                 </div>
+
+                                <div class="card-header">
+                                    <a class="collapsed card-link" data-toggle="collapse" href="#accordion45">
+                                    <i className="fa fa-stethoscope"></i> &nbsp; Consultation</a>
+                                </div>
+                                <div id="accordion45" class="collapse" data-parent="#accordion4">
+                                    <div class="card-body">
+                                        <ul>
+                                            <li><Link to="/add-soap-note" className="otherlinks">Add SOAP Note</Link></li>
+                                            <li><Link to="/lab-req-form-doctor" className="otherlinks">Lab Request Form</Link></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="card-header">
+                                    <a class="collapsed card-link" data-toggle="collapse" href="#accordion43">
+                                    <i className="fa fa-flask"></i> &nbsp; Laboratory</a>
+                                </div>
+                                <div id="accordion43" class="collapse" data-parent="#accordion4">
+                                    <div class="card-body">
+                                        <ul>
+                                            <li><Link to="/" className="otherlinks">Lab Results</Link></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
                                 <div class="card-header">
                                     <a class="collapsed card-link" data-toggle="collapse" href="#accordion42">
                                     <i className="ti-palette"></i> &nbsp; Nursing</a>
@@ -56,17 +82,7 @@ const Sidebar = () => {
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="card-header">
-                                    <a class="collapsed card-link" data-toggle="collapse" href="#accordion43">
-                                    <i className="fa fa-flask"></i> &nbsp; Laboratory</a>
-                                </div>
-                                <div id="accordion43" class="collapse" data-parent="#accordion4">
-                                    <div class="card-body">
-                                        <ul>
-                                            <li><Link to="/" className="otherlinks">Lab Results</Link></li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                
                                 <div class="card-header">
                                     <a class="collapsed card-link" data-toggle="collapse" href="#accordion44">
                                     <i className="fa fa-medkit"></i> &nbsp; Pharmacy</a>
@@ -78,17 +94,7 @@ const Sidebar = () => {
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="card-header">
-                                    <a class="collapsed card-link" data-toggle="collapse" href="#accordion45">
-                                    <i className="fa fa-stethoscope"></i> &nbsp; Doctor</a>
-                                </div>
-                                <div id="accordion45" class="collapse" data-parent="#accordion4">
-                                    <div class="card-body">
-                                        <ul>
-                                            <li><Link to="/" className="otherlinks">Prescriptions</Link></li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                
                             </div>
                         </ul>
                     </nav>

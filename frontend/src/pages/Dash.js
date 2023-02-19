@@ -110,15 +110,15 @@ const Dash = (props) => {
                     </div>
                 </div>
             </div>
-            <div className="col-xl-5 col-lg-12 mt-5">
+            {/* <div className="col-xl-5 col-lg-12 mt-5">
                 <div className="card">
                     <div className="card-body">
                         <h4 className="header-title">Marketing Area</h4>
                         <div id="seomap"></div>
                     </div>
                 </div>
-            </div>
-            <div className="col-xl-7 col-lg-12 mt-5">
+            </div> */}
+            {/* <div className="col-xl-7 col-lg-12 mt-5">
                 <div className="card">
                     <div className="card-body bg1">
                         <h4 className="header-title text-white">Client Feadback</h4>
@@ -156,7 +156,7 @@ const Dash = (props) => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     </div>
     </>

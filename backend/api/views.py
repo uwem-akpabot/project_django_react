@@ -6,8 +6,8 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
 
-from .serializers import PatientSerializer
-from patient.models import Patient
+from .serializers import PatientSerializer, SoapNoteSerializer
+from patient.models import Patient, SoapNote
 
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
     @classmethod
@@ -123,3 +123,72 @@ def deletePatient(request, pk):
     patient = Patient.objects.get(id=pk)
     patient.delete() 
     return Response('Patient has been deleted')
+
+
+"""
+////// SOAP NOTES
+"""
+
+"""
+GET SOAP NOTES FOR A SINGLE PATIENT
+"""
+@api_view(['GET'])
+# @permission_classes([IsAuthenticated])
+def getSoapNotes_SinglePatient(request, pk):
+    user = request.user
+    # patient = user.patient_set.get(id=pk)
+    soapnote = SoapNote.objects.get(id=pk)
+    serializer = SoapNoteSerializer(soapnote, many=False) 
+    return Response(serializer.data)
+
+"""
+CREATE NEW SOAP NOTES 
+"""
+@api_view(['POST'])
+# @permission_classes([IsAuthenticated])
+def createSoapNote(request):
+    user = request.user
+    data = request.data #get the json data
+
+    patient = Patient.objects.create(
+        fname = data['fname'],
+        sname = data['sname'],
+        clinic_no = data['clinic_no'],
+        address = data['address'],
+        phone = data['phone'],
+        gender = data['gender'],
+        email = data['email'],
+        nextkin = data['nextkin']
+        # user_id = user
+    )
+    serializer = PatientSerializer(patient, many=False) 
+    return Response(serializer.data)
+
+"""
+UPDATE SOAP NOTES 
+"""
+# @api_view(['PUT'])
+# # @permission_classes([IsAuthenticated])
+# def updateSoapNote(request, pk):
+#     user = request.user
+#     data = request.data #get the json data
+#     # patient = user.patient_set.get(id=pk)
+#     patient = Patient.objects.get(id=pk)
+#     serializer = PatientSerializer(instance=patient, data=data) 
+    
+#     if serializer.is_valid():
+#         serializer.save()
+
+#     return Response(serializer.data)
+
+"""
+DELETE SOAP NOTES 
+"""
+# @api_view(['DELETE'])
+# # @permission_classes([IsAuthenticated])
+# def deleteSoapNote(request, pk):
+#     user = request.user
+#     # patient = user.patient_set.get(id=pk)
+#     patient = Patient.objects.get(id=pk)
+#     patient.delete() 
+#     return Response('Patient has been deleted')

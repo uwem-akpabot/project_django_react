@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import swal from 'sweetalert';
 
-const AddPatient = () => {
+const LabRequestForm = () => {
     const {register, handleSubmit, reset, formState: { errors } } = useForm();
     let formData = new FormData();
 
@@ -141,4 +141,4 @@ const AddPatient = () => {
         </>
     )
 }
-export default AddPatient;
+export default LabRequestForm;
