@@ -4,8 +4,8 @@ const Footer = () => {
   return (
     <>
     <footer>
-      <div className="footer-area">
-          <p>BEYOND ©2023. All rights reserved. <a href="">ICA Specs Ltd</a>.</p>
+      <div className="footer-area text-left px-4">
+          <p><small>&copy; 2023. <b>BEYOND'S HEALTHARE</b>. Developer: <a href="">ICA Specs Ltd</a></small></p>
       </div>
     </footer>
     </>
