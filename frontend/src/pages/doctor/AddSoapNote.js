@@ -24,7 +24,7 @@ const AddSoapNote = () => {
             }
         }
         axios.post(
-            `http://localhost:8000/api/soapnote/addsoapnote/`,
+            `http://localhost:8000/api/soapnotes/create/`,
             formData,
             requestOptions
         ).then(res => res)

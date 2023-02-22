@@ -2861,3 +2861,6 @@ table.dataTable thead td {
 }
 
 /*-------------------- END Offset Sidebar ------------------- */
+.custom-checkboxes label{
+    color:#fff !important
+}

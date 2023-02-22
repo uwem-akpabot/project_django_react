@@ -6,16 +6,16 @@ import swal from 'sweetalert';
 import SideComponent_Consultation from '../../components/SideComponent_Consultation';
 
 const ManageSoapNotes = () => {
-  let [soapnotes, setSoapnotes] = useState([])
+  let [soapnotes, setSoapNotes] = useState([])
   let {authTokens, logoutUser} = useContext(AuthContext)
   
   let {user} = useContext(AuthContext);
 
   useEffect(() => {
-    getSoapnotes()
+    getSoapNotes()
   }, [])
 
-  let getSoapnotes = async() => {
+  let getSoapNotes = async() => {
     let response = await fetch('http://localhost:8000/api/soapnotes/', {
       method: 'GET',
       headers: {
@@ -26,7 +26,7 @@ const ManageSoapNotes = () => {
     let data = await response.json()
 
     if (response.status === 200){
-      setSoapnotes(data)
+      setSoapNotes(data)
     } else if (response.status === 'Unauthorized'){
       logoutUser()
     }
@@ -39,7 +39,7 @@ const ManageSoapNotes = () => {
           text: response.data.message,
           icon: "success"
       }).then(function () {
-            getSoapnotes()
+            getSoapNotes()
       })
     )
   }
@@ -50,7 +50,7 @@ const ManageSoapNotes = () => {
             text: error,
             icon: "error"
         }).then(function () {
-          getSoapnotes()
+          getSoapNotes()
         })          
       )
   }
@@ -109,7 +109,7 @@ const ManageSoapNotes = () => {
                                   { soapnotes.map(soapnote => (
                                     <tr key={soapnote.id}>
                                       {/* <th scope="row">{patient.clinic_no}</th> */}
-                                      <th scope="row">{soapnote.patient_id}</th>
+                                      <th scope="row">{soapnote.patient}</th>
                                       <td>{soapnote.date_of_visit}</td>
                                       <td>{soapnote.subjective}</td>
                                       <td><span className="status-p bg-warning">Sent to lab</span></td>

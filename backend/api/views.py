@@ -137,8 +137,8 @@ GET ALL SOAP NOTES
 def getSoapNotes(request):
     user = request.user
     # patient = user.patient_set.all()
-    soapnote = SoapNote.objects.all
-    serializer = SoapNoteSerializer(soapnote, many=True) 
+    soapnotes = SoapNote.objects.all()
+    serializer = SoapNoteSerializer(soapnotes, many=True) 
     return Response(serializer.data)
 
 """

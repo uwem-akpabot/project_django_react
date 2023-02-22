@@ -157,7 +157,7 @@ const AddPatient = () => {
                 <SideComponent_Patient /> 
             </div>
         </div>
-        </>
+    </>
     )
 }
 export default AddPatient;
