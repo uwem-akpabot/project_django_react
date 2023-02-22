@@ -97,175 +97,189 @@ const LabRequestForm = () => {
                                 </div>
                                 <div className="form-row"> 
                                     <div className="col-12 col-md-4 mb-3">
-                                        <div className="sbg4">
+                                        <div className="sbg4 pb-4">
                                             <div className="p-4 d-flex justify-content-between align-items-center">
-                                                <div className="seofct-icon"> Profile Test</div>
+                                                <div className="seofct-icon text-dark"> Profile Test</div>
                                                 <h2 className="seofct-icon"><i className="ti-thumb-up"></i></h2>
                                             </div>
-                                            <div className="row custom-checkboxes px-4">
-                                                <div className="col-6">
-                                                    <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor="" className="text-white"> &nbsp; G2000</label>
-                                                </div>
+                                            <div className="row text-dark px-4">
                                                 <div className="col-6">
                                                     <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
                                                     <label htmlFor=""> &nbsp; G2000</label>
                                                 </div>
                                                 <div className="col-6">
                                                     <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
+                                                    <label htmlFor=""> &nbsp; LIP</label>
                                                 </div>
                                                 <div className="col-6">
                                                     <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
+                                                    <label htmlFor=""> &nbsp; GT9</label>
                                                 </div>
                                                 <div className="col-6">
                                                     <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
+                                                    <label htmlFor=""> &nbsp; GTI</label>
                                                 </div>
                                                 <div className="col-6">
                                                     <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
+                                                    <label htmlFor=""> &nbsp; NEO</label>
                                                 </div>
                                                 <div className="col-6">
                                                     <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
+                                                    <label htmlFor=""> &nbsp; ES</label>
                                                 </div>
                                                 <div className="col-6">
                                                     <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
+                                                    <label htmlFor=""> &nbsp; HB3</label>
                                                 </div>
                                                 <div className="col-6">
                                                     <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
+                                                    <label htmlFor=""> &nbsp; DFS</label>
                                                 </div>
                                                 <div className="col-6">
                                                     <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
+                                                    <label htmlFor=""> &nbsp; LFT</label>
                                                 </div>
                                                 <div className="col-6">
                                                     <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
+                                                    <label htmlFor=""> &nbsp; RFT</label>
                                                 </div>
                                                 <div className="col-6">
                                                     <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
+                                                    <label htmlFor=""> &nbsp; TFT</label>
+                                                </div>
+                                                <div className="col-6">
+                                                    <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
+                                                    <label htmlFor=""> &nbsp; MAC</label>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div className="col-12 col-md-4 mb-3">
-                                        <div className="sbg4">
+                                        <div className="sbg1 pb-4">
                                             <div className="p-4 d-flex justify-content-between align-items-center">
-                                                <div className="seofct-icon"> Profile Test</div>
+                                                <div className="seofct-icon"> Biochemistry</div>
                                                 <h2 className="seofct-icon"><i className="ti-thumb-up"></i></h2>
                                             </div>
                                             <div className="row custom-checkboxes px-4">
                                                 <div className="col-6">
                                                     <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor="" className="text-white"> &nbsp; G2000</label>
+                                                    <label htmlFor="" className="text-white"> &nbsp; CEA</label>
                                                 </div>
                                                 <div className="col-6">
                                                     <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
+                                                    <label htmlFor=""> &nbsp; CA 1</label>
                                                 </div>
                                                 <div className="col-6">
                                                     <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
+                                                    <label htmlFor=""> &nbsp; CA 5</label>
                                                 </div>
                                                 <div className="col-6">
                                                     <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
+                                                    <label htmlFor=""> &nbsp; HIV 1 &amp; 2</label>
                                                 </div>
                                                 <div className="col-6">
                                                     <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
+                                                    <label htmlFor=""> &nbsp; Uric Acid</label>
                                                 </div>
                                                 <div className="col-6">
                                                     <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
+                                                    <label htmlFor=""> &nbsp; Glucose</label>
                                                 </div>
                                                 <div className="col-6">
                                                     <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
+                                                    <label htmlFor=""> &nbsp; Free T4</label>
                                                 </div>
                                                 <div className="col-6">
                                                     <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
+                                                    <label htmlFor=""> &nbsp; PSA</label>
                                                 </div>
                                                 <div className="col-6">
                                                     <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
+                                                    <label htmlFor=""> &nbsp; CA 9</label>
                                                 </div>
                                                 <div className="col-6">
                                                     <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
+                                                    <label htmlFor=""> &nbsp; HBA1c</label>
                                                 </div>
                                                 <div className="col-6">
                                                     <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
+                                                    <label htmlFor=""> &nbsp; HBSAc</label>
                                                 </div>
                                                 <div className="col-6">
                                                     <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
+                                                    <label htmlFor=""> &nbsp; H. Pylari</label>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div className="col-12 col-md-4 mb-3">
-                                        <div className="sbg4">
+                                        <div className="sbg2 pb-4">
                                             <div className="p-4 d-flex justify-content-between align-items-center">
-                                                <div className="seofct-icon"> Profile Test</div>
+                                                <div className="seofct-icon"> Haematology</div>
                                                 <h2 className="seofct-icon"><i className="ti-thumb-up"></i></h2>
                                             </div>
                                             <div className="row custom-checkboxes px-4">
                                                 <div className="col-6">
                                                     <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor="" className="text-white"> &nbsp; G2000</label>
+                                                    <label htmlFor="" className="text-white"> &nbsp; FBE</label>
                                                 </div>
                                                 <div className="col-6">
                                                     <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
+                                                    <label htmlFor=""> &nbsp; FBC</label>
                                                 </div>
                                                 <div className="col-6">
                                                     <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
+                                                    <label htmlFor=""> &nbsp; HB</label>
                                                 </div>
                                                 <div className="col-6">
                                                     <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
+                                                    <label htmlFor=""> &nbsp; TWDC</label>
                                                 </div>
                                                 <div className="col-6">
                                                     <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
+                                                    <label htmlFor=""> &nbsp; Platelets</label>
                                                 </div>
-                                                <div className="col-6">
+                                                <div className="col-12">
                                                     <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
+                                                    <label htmlFor=""> &nbsp; ABO and RH (D)</label>
                                                 </div>
-                                                <div className="col-6">
+                                                <div className="col-12">
                                                     <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
+                                                    <label htmlFor=""> &nbsp; Malaria Parasites</label>
                                                 </div>
-                                                <div className="col-6">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-12 col-md-4 mb-3">
+                                        <div className="sbg3 pb-4">
+                                            <div className="p-4 d-flex justify-content-between align-items-center">
+                                                <div className="seofct-icon"> Microbiology</div>
+                                                <h2 className="seofct-icon"><i className="ti-thumb-up"></i></h2>
+                                            </div>
+                                            <div className="row custom-checkboxes px-4">
+                                                <div className="col-12">
                                                     <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
+                                                    <label htmlFor="" className="text-white"> &nbsp; Urine</label>
                                                 </div>
-                                                <div className="col-6">
+                                                <div className="col-12">
                                                     <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
+                                                    <label htmlFor=""> &nbsp; Microscopy</label>
                                                 </div>
-                                                <div className="col-6">
+                                                <div className="col-12">
                                                     <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
+                                                    <label htmlFor=""> &nbsp; RPR (VDRL)</label>
                                                 </div>
-                                                <div className="col-6">
+                                                <div className="col-12">
                                                     <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
+                                                    <label htmlFor=""> &nbsp; AFB (Smear Only)</label>
                                                 </div>
-                                                <div className="col-6">
+                                                <div className="col-12">
+                                                    <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
+                                                    <label htmlFor=""> &nbsp; AFB (Smear and Culture)</label>
+                                                </div>
+                                                <div className="col-12">
                                                     <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
                                                     <label htmlFor=""> &nbsp; G2000</label>
                                                 </div>
@@ -273,117 +287,23 @@ const LabRequestForm = () => {
                                         </div>
                                     </div>
                                     <div className="col-12 col-md-4 mb-3">
-                                        <div className="sbg4">
+                                        <div className="bg-secondary pb-4">
                                             <div className="p-4 d-flex justify-content-between align-items-center">
-                                                <div className="seofct-icon"> Profile Test</div>
+                                                <div className="seofct-icon text-dark"> Anatomical Pathology</div>
                                                 <h2 className="seofct-icon"><i className="ti-thumb-up"></i></h2>
                                             </div>
-                                            <div className="row custom-checkboxes px-4">
-                                                <div className="col-6">
+                                            <div className="row text-dark px-4">
+                                                <div className="col-12">
                                                     <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor="" className="text-white"> &nbsp; G2000</label>
+                                                    <label htmlFor=""> &nbsp; Histology</label>
                                                 </div>
-                                                <div className="col-6">
+                                                <div className="col-12">
                                                     <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
+                                                    <label htmlFor=""> &nbsp; Non-Gynae/FNA</label>
                                                 </div>
-                                                <div className="col-6">
+                                                <div className="col-12">
                                                     <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
-                                                </div>
-                                                <div className="col-6">
-                                                    <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
-                                                </div>
-                                                <div className="col-6">
-                                                    <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
-                                                </div>
-                                                <div className="col-6">
-                                                    <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
-                                                </div>
-                                                <div className="col-6">
-                                                    <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
-                                                </div>
-                                                <div className="col-6">
-                                                    <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
-                                                </div>
-                                                <div className="col-6">
-                                                    <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
-                                                </div>
-                                                <div className="col-6">
-                                                    <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
-                                                </div>
-                                                <div className="col-6">
-                                                    <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
-                                                </div>
-                                                <div className="col-6">
-                                                    <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-12 col-md-4 mb-3">
-                                        <div className="sbg4">
-                                            <div className="p-4 d-flex justify-content-between align-items-center">
-                                                <div className="seofct-icon"> Profile Test</div>
-                                                <h2 className="seofct-icon"><i className="ti-thumb-up"></i></h2>
-                                            </div>
-                                            <div className="row custom-checkboxes px-4">
-                                                <div className="col-6">
-                                                    <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor="" className="text-white"> &nbsp; G2000</label>
-                                                </div>
-                                                <div className="col-6">
-                                                    <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
-                                                </div>
-                                                <div className="col-6">
-                                                    <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
-                                                </div>
-                                                <div className="col-6">
-                                                    <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
-                                                </div>
-                                                <div className="col-6">
-                                                    <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
-                                                </div>
-                                                <div className="col-6">
-                                                    <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
-                                                </div>
-                                                <div className="col-6">
-                                                    <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
-                                                </div>
-                                                <div className="col-6">
-                                                    <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
-                                                </div>
-                                                <div className="col-6">
-                                                    <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
-                                                </div>
-                                                <div className="col-6">
-                                                    <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
-                                                </div>
-                                                <div className="col-6">
-                                                    <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
-                                                </div>
-                                                <div className="col-6">
-                                                    <input type="checkbox" name="profile_test" value="G2000" id="validationCustom01" />
-                                                    <label htmlFor=""> &nbsp; G2000</label>
+                                                    <label htmlFor=""> &nbsp; Site</label>
                                                 </div>
                                             </div>
                                         </div>
