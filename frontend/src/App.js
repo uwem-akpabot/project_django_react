@@ -13,6 +13,10 @@ import ManagePatients from "./pages/patients/ManagePatients";
 import AddSoapNote from "./pages/doctor/AddSoapNote";
 import LabRequestForm from "./pages/doctor/LabRequestForm";
 import ManageSoapNotes from "./pages/doctor/ManageSoapNotes";
+import Navbar from "./components/Navbar";
+import About from "./pages/About";
+import Services from "./pages/Services";
+import Contact from "./pages/Contact";
 
 function App() {
   const company = "Beyond's Healthcare and Fertility Center"
@@ -22,13 +26,19 @@ function App() {
     <BrowserRouter>
       <AuthProvider>
         <Routes>
-          <Route exact path="/" element={<Homepage />} />
+          <Route element={<Navbar />}> 
+            <Route exact path="/" element={<Homepage />} />
+            <Route exact path="/about" element={<About />} />
+            <Route exact path="/services" element={<Services />} />
+            <Route exact path="/contact" element={<Contact />} />
+
+            <Route path="*" element={<main style={{ padding: "1rem" }}>
+              <h3>Error 404! Page doesn't exist</h3><p>Oops! You landed on a page that does not exist</p></main>}
+            />
+          </Route>
+          
           <Route path="/login" element={<LoginPage company={company} />} />
           <Route path="/register" element={<RegisterPage />} />
-
-          <Route path="*" element={<main style={{ padding: "1rem" }}>
-            <h3>Error 404! Page doesn't exist</h3><p>Oops! You landed on a page that does not exist</p></main>}
-          />
           
           <Route element={<PrivateRoutes />}>
             <Route path="/dashboard" element={<Dashboard />} />   

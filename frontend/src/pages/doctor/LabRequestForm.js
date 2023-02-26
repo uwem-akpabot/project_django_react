@@ -86,8 +86,8 @@ const LabRequestForm = () => {
                                         <select name="gender" className="form-control" id="validationCustom02" 
                                             {...register("gender", { required: true })} required >
                                             <option value="">- Choose -</option>
-                                            <option value="Male">Male</option>
-                                            <option value="Female">Female</option>
+                                            <option value="Male">John Doe</option>
+                                            <option value="Female">Abobakar Afine</option>
                                         </select>
                                         {errors.gender && <small className="text-danger text-xs font-italic">Gender is required</small>}
                                         {/* <input type="text" name="gender" className="form-control" id="validationCustom02" placeholder="Gender" 
