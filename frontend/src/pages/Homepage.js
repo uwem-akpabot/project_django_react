@@ -16,8 +16,7 @@ const Homepage = () => {
             <div className="row">
                 <div className="col-12 col-md-6">
                     <h1 className="text-primary">Caring for better life and medical excellence. </h1>
-                    We lead the way in medical excellence. Creeping beginning over gathered brought 
-                    over gathered brought.
+                    We specialize in In Vitro Fertilization (IVF) with over 75% success rate. Our doctors are highly professional in their duties.
                 </div>
             </div>
         </div>
@@ -32,8 +31,8 @@ const Homepage = () => {
                 </div>
                 <div className="col-lg-7">
                     <div className="welcome-text mt-5 mt-lg-0" style={{border:0}}>
-                        <h2>Welcome to our clinic</h2>
-                        <p className="pt-3">Subdue whales void god which living don't midst lesser yielding over lights whose. Cattle greater brought sixth fly den dry good tree isn't seed stars were.</p>
+                        <h2>Welcome to Beyond's Healthcare Services.</h2>
+                        <p className="pt-3">We are specialist in In Vitro Fertilization (IVF) with over 75% success rate. Our doctors are highly professional in their duties whose greater brought sixth fly.</p>
                         <p>Subdue whales void god which living don't midst lesser yielding over lights whose. Cattle greater brought sixth fly den dry good tree isn't seed stars were the boring.</p>
                         <a href="#" class="template-btn mt-3">learn more</a>
                     </div>
