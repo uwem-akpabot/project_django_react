@@ -7,36 +7,84 @@ import logo from '../images_website/logo.png';
 const Navbar = () => {
   return (
     <>
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
-  <div className="container-fluid">
-    <div id="logo">
-        <a href="index.html"><img src={logo} alt="" title="" style={{width:"80px"}} /> BEYOND'S</a>
+    <div className="container-fluid bg-light p-0 wow fadeIn" data-wow-delay="0.1s">
+        <div className="row gx-0 d-none d-lg-flex">
+            <div className="col-lg-7 px-5 text-start">
+                <div className="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small className="fa fa-map-marker-alt text-primary me-2"></small>
+                    <small>Plot 123 Street Abc, Karu, Abuja, Nigeria &nbsp; </small>
+                </div>
+                <div className="h-100 d-inline-flex align-items-center py-3">
+                    <small className="far fa-clock text-primary me-2"></small>
+                    <small> &middot; &nbsp; Mon - Fri : 09.00 AM - 09.00 PM</small>
+                </div>
+            </div>
+            <div className="col-lg-5 px-5 text-end">
+                <div className="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small className="fa fa-phone-alt text-primary me-2"></small>
+                    <small>+234 (0)801 234 678</small>
+                </div>
+                <div className="h-100 d-inline-flex align-items-center">
+                    <a className="btn btn-sm-square text-primary me-1" href=""><i className="fa fa-facebook-f"></i></a>
+                    <a className="btn btn-sm-square text-primary me-1" href=""><i className="fa fa-twitter"></i></a>
+                    <a className="btn btn-sm-square text-primary me-1" href=""><i className="fa fa-linkedin"></i></a>
+                    <a className="btn btn-sm-square text-primary me-0" href=""><i className="fa fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
     </div>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-        <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">Link</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link disabled">Disabled</a>
-        </li>
-      </ul>
-      <form className="d-flex" role="search">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-        <button className="btn btn-outline-success" type="submit">Search</button>
-      </form>
+    
+    <nav className="navbar navbar-expand-lg navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
+    <div className="container">
+        <img src={logo} alt="" title="" style={{width:"70px" }} /> &nbsp; 
+        <a class="navbar-brand" href="#" style={{ color:"purple"}}><strong>Beyond's </strong>Healthcare</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link text-dark" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="#">Pricing</a>
+            </li>
+            </ul>
+            <span class="navbar-text text-dark">
+                <button className="btn btn-primary btn-lg">Take action</button>
+            </span>
+        </div>
     </div>
-  </div>
-</nav>
+  
+  {/* <a href="" className="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 className="m-0 text-primary">
+            <img src={logo} alt="" title="" style={{width:"70px" }} /> <strong>BEYOND'S</strong></h2>
+        </a>
+        <button type="button" className="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarCollapse">
+            <div className="navbar-nav ms-auto p-4 p-lg-0">
+                <Link to="/" className="nav-item active">Home</Link>
+                <Link to="/about" className="nav-item">About</Link>
+                <Link to="/service" className="nav-item">Service</Link>
+                <div className="nav-item dropdown">
+                    <a href="#" className="dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <div className="dropdown-menu rounded-0 rounded-bottom m-0">
+                    <Link to="/" className="dropdown-item">Feature</Link>
+                    </div>
+                </div>
+                <Link to="/contact" className="nav-item">Contact</Link>
+            </div>
+            <a href="" className="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block float-right">Appointment<i className="fa fa-arrow-right ms-3"></i></a>
+        </div> */}
+    </nav>
 
-{/* <header className="header-area">
-        <div className="header-top clearfix">
+    <header className="header-area">
+        {/* <div className="header-top">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-9 d-md-flex">
@@ -57,12 +105,15 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="header home">
+        </div> */}
+        
+        {/* <div id="header" id="home"> */}
+
+        {/* <div id="header home"> 
             <div className="container">
                 <div className="row align-items-center justify-content-between d-flex">
                 <div id="logo">
-                    <a href="index.html"><img src={logo} alt="" title="" style={{width:"32px"}} /></a>
+                    <a href="index.html"><img src="assets/images/logo/logo.png" alt="" title="" /></a>
                 </div>
                 <nav id="nav-menu-container">
                     <ul className="nav-menu">
@@ -83,12 +134,11 @@ const Navbar = () => {
                         </li>
                         <li><a href="contact.html">Contact</a></li>			          				          
                     </ul>
-                </nav>    		
+                </nav>	    		
                 </div>
             </div>
-        </div>
-    </header> */}
-
+        </div> */}
+    </header>
     <Outlet />
     <FooterWebsite />
     </>
