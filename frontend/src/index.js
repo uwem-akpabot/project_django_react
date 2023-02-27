@@ -7,6 +7,7 @@ import './assets/vendors/css/vendor.bundle.base.css';
 import './assets/vendors/font-awesome/css/font-awesome.min.css';
 import './assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css';
 import './assets/css/style.css';
+// import './style.css';
 // Put any other imports below so that CSS from your components takes precedence over default styles.
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

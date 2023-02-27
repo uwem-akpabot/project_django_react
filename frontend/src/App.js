@@ -28,9 +28,9 @@ function App() {
         <Routes>
           <Route element={<Navbar />}> 
             <Route exact path="/" element={<Homepage />} />
-            <Route exact path="/about" element={<About />} />
+            {/* <Route exact path="/about" element={<About />} />
             <Route exact path="/services" element={<Services />} />
-            <Route exact path="/contact" element={<Contact />} />
+            <Route exact path="/contact" element={<Contact />} /> */}
 
             <Route path="*" element={<main style={{ padding: "1rem" }}>
               <h3>Error 404! Page doesn't exist</h3><p>Oops! You landed on a page that does not exist</p></main>}
