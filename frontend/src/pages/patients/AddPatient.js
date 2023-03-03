@@ -4,7 +4,7 @@ import axios from 'axios';
 import swal from 'sweetalert';
 import SideComponent_Patient from '../../components/SideComponent_Patient';
 
-const AddPatient = (props) => {
+const AddPatient = () => {
     const {register, handleSubmit, reset, formState: { errors } } = useForm();
     let formData = new FormData();
 
@@ -25,7 +25,7 @@ const AddPatient = (props) => {
             }
         }
         axios.post(
-            `${props.host_url}/patients/create/`,
+            `https://beyondhealthcare.com.ng/api/patients/create/`,
             formData,
             requestOptions
         ).then(res => res)

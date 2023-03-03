@@ -19,8 +19,6 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 
 function App() {
-  const HOST_URL = "https://beyondhealthcare.com.ng/api";
-  // const HOST_URL = "http://localhost:8000/api";
   // const HOST_URL = "https://beyondhealthcare.com.ng/api";
 
   const company = "Beyond's Healthcare and Fertility Center"
@@ -45,14 +43,14 @@ function App() {
           <Route path="/register" element={<RegisterPage />} />
           
           <Route element={<PrivateRoutes />}>
-            <Route path="/dashboard" element={<Dashboard host_url={HOST_URL} />} />   
-            <Route element={<Sidebar host_url={HOST_URL} />}> 
-              <Route path="/dash" element={<Dash host_url={HOST_URL} />} /> 
-              <Route path="/add-patient" element={<AddPatient />} host_url={HOST_URL} /> 
-              <Route path="/manage-patients" element={<ManagePatients />} host_url={HOST_URL} /> 
-              <Route path="/add-soap-note" element={<AddSoapNote />} host_url={HOST_URL} /> 
-              <Route path="/soapnotes" element={<ManageSoapNotes />} host_url={HOST_URL} /> 
-              <Route path="/lab-req-form-doctor" element={<LabRequestForm />} host_url={HOST_URL} /> 
+            <Route path="/dashboard" element={<Dashboard />} />   
+            <Route element={<Sidebar  />}> 
+              <Route path="/dash" element={<Dash />} /> 
+              <Route path="/add-patient" element={<AddPatient />} /> 
+              <Route path="/manage-patients" element={<ManagePatients />} /> 
+              <Route path="/add-soap-note" element={<AddSoapNote />} /> 
+              <Route path="/soapnotes" element={<ManageSoapNotes />} /> 
+              <Route path="/lab-req-form-doctor" element={<LabRequestForm />} /> 
             </Route>
           </Route>
         </Routes>
