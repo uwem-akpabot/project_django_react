@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import logo from '../assets_website/images/logo.png';
 
 const HeaderTop = () => {
   return (
@@ -44,7 +45,7 @@ const HeaderTop = () => {
             <div className="logo">
                   <figure>
                         <a href="index.html">
-                              <img src="images/logo.png" alt="" width="130" />
+                              <img src={logo} alt="" width="130" />
                         </a>
                   </figure>
             </div>

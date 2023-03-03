@@ -82,6 +82,10 @@ const Navbar = () => {
         
         <Outlet />
         <FooterWebsite />
+
+        <div className="scroll-to-top scroll-to-target" data-target=".header-top">
+            <span className="icon fa fa-angle-up"></span>
+        </div>
     </div>
     </>
   )

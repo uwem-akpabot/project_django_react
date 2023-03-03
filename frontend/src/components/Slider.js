@@ -1,10 +1,11 @@
 import React from 'react'
+import slider1 from '../assets_website/images/slider/slider-bg-1.jpg';
 
 const Slider = () => {
   return (
     <>
     <div className="hero-slider">
-        <div className="slider-item slide1" style={{backgroundImage:"url(images/slider/slider-bg-1.jpg)"}}>
+        <div className="slider-item slide1" style={{backgroundImage:"url({slider1})"}}>
             <div className="container">
                 <div className="row">
                     <div className="col-12">
