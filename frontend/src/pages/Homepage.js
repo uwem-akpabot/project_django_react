@@ -1,12 +1,22 @@
 import React from 'react';
-import feature1 from '../images_website/images/feature1.png';
-import feature2 from '../images_website/images/feature2.png';
-import feature3 from '../images_website/images/feature3.png';
-import feature4 from '../images_website/images/feature4.png';
-import welcome from '../images_website/images/welcome.png';
-import department1 from '../images_website/images/department1.jpg';
-import department2 from '../images_website/images/department2.jpg';
-import department3 from '../images_website/images/department3.jpg';
+import service1 from '../assets_website/images/services/service-one.jpg';
+import service2 from '../assets_website/images/services/service-two.jpg';
+import service3 from '../assets_website/images/services/service-three.jpg';
+import service4 from '../assets_website/images/services/service-four.jpg';
+import service5 from '../assets_website/images/services/service-five.jpg';
+import resource1 from '../assets_website/images/resource/1.png';
+import resource2 from '../assets_website/images/resource/2.png';
+import resource3 from '../assets_website/images/resource/3.png';
+import resource4 from '../assets_website/images/resource/4.png';
+import gallery1 from '../assets_website/images/gallery/1.jpg';
+import gallery2 from '../assets_website/images/gallery/2.jpg';
+import gallery3 from '../assets_website/images/gallery/3.jpg';
+import doctor2 from '../assets_website/images/team/doctor-2.jpg';
+import doctor3 from '../assets_website/images/team/doctor-3.jpg';
+import event2 from '../assets_website/images/team/event-2.jpg';
+import testimonial1 from '../assets_website/images/testimonials/1.png';
+import testimonial2 from '../assets_website/images/testimonials/2.png';
+import testimonial3 from '../assets_website/images/testimonials/3.png';
 
 const Homepage = () => {
   return (
@@ -60,7 +70,7 @@ const Homepage = () => {
 								<div className="icon-box">
 									<figure>
 										<a href="#">
-											<img src="images/resource/1.png" alt="" />
+											<img src={resource1} alt="" />
 										</a>
 									</figure>
 								</div>
@@ -74,7 +84,7 @@ const Homepage = () => {
 								<div className="icon-box">
 									<figure>
 										<a href="#">
-											<img src="images/resource/2.png" alt="" />
+											<img src={resource2} alt="" />
 										</a>
 									</figure>
 								</div>
@@ -88,7 +98,7 @@ const Homepage = () => {
 								<div className="icon-box">
 									<figure>
 										<a href="#">
-											<img src="images/resource/3.png" alt="" />
+											<img src={resource3} alt="" />
 										</a>
 									</figure>
 								</div>
@@ -102,7 +112,7 @@ const Homepage = () => {
 								<div className="icon-box">
 									<figure>
 										<a href="#">
-											<img src="images/resource/4.png" alt="" />
+											<img src={resource4} alt="" />
 										</a>
 									</figure>
 								</div>
@@ -144,7 +154,7 @@ const Homepage = () => {
                     <div className="tab-content">
                         <div className="service-box tab-pane fade in active row" id="dormitory">
                             <div className="col-md-6">
-                                <img className="img-responsive" src="images/services/service-one.jpg" alt="service-image" />
+                                <img className="img-responsive" src={service1} alt="service-image" />
                             </div>
                             <div className="col-md-6">
                                 <div className="contents">
@@ -171,7 +181,7 @@ const Homepage = () => {
                         </div>
                         <div className="service-box tab-pane fade in" id="orthopedic">
                             <div className="col-md-6">
-                                <img className="img-responsive" src="images/services/service-two.jpg" alt="service-image" />
+                                <img className="img-responsive" src={service2} alt="service-image" />
                             </div>
                             <div className="col-md-6">
                                 <div className="contents">
@@ -198,7 +208,7 @@ const Homepage = () => {
                         </div>
                         <div className="service-box tab-pane fade in" id="sonogram">
                             <div className="col-md-6">
-                                <img className="img-responsive" src="images/services/service-three.jpg" alt="service-image" />
+                                <img className="img-responsive" src={service3} alt="service-image" />
                             </div>
                             <div className="col-md-6">
                                 <div className="contents">
@@ -225,7 +235,7 @@ const Homepage = () => {
                         </div>
                         <div className="service-box tab-pane fade in" id="x-ray">
                             <div className="col-md-6">
-                                <img className="img-responsive" src="images/services/service-four.jpg" alt="service-image" />
+                                <img className="img-responsive" src={service4} alt="service-image" />
                             </div>
                             <div className="col-md-6">
                                 <div className="contents">
@@ -252,7 +262,7 @@ const Homepage = () => {
                         </div>
                         <div className="service-box tab-pane fade in" id="diagnostic">
                             <div className="col-md-6">
-                                <img className="img-responsive" src="images/services/service-five.jpg" alt="service-image" />
+                                <img className="img-responsive" src={service5} alt="service-image" />
                             </div>
                             <div className="col-md-6">
                                 <div className="contents">
@@ -297,7 +307,7 @@ const Homepage = () => {
                 <div className="inner-box">
                     <div className="img_holder">
                         <a href="service.html">
-                            <img src="images/gallery/1.jpg" alt="images" className="img-responsive" />
+                            <img src={gallery1} alt="images" className="img-responsive" />
                         </a>
                     </div>
                     <div className="image-content text-center">
@@ -313,7 +323,7 @@ const Homepage = () => {
                 <div className="inner-box">
                     <div className="img_holder">
                         <a href="service.html">
-                            <img src="images/gallery/2.jpg" alt="images" className="img-responsive" />
+                            <img src={gallery2} alt="images" className="img-responsive" />
                         </a>
                     </div>
                     <div className="image-content text-center">
@@ -329,7 +339,7 @@ const Homepage = () => {
                 <div className="inner-box">
                     <div className="img_holder">
                         <a href="service.html">
-                            <img src="images/gallery/3.jpg" alt="images" className="img-responsive" />
+                            <img src={gallery3} alt="images" className="img-responsive" />
                         </a>
                     </div>
                     <div className="image-content text-center">
@@ -345,7 +355,7 @@ const Homepage = () => {
                 <div className="inner-box">
                     <div className="img_holder">
                         <a href="service.html">
-                            <img src="images/gallery/1.jpg" alt="images" className="img-responsive" />
+                            <img src={gallery1} alt="images" className="img-responsive" />
                         </a>
                     </div>
                     <div className="image-content text-center">
@@ -361,7 +371,7 @@ const Homepage = () => {
                 <div className="inner-box">
                     <div className="img_holder">
                         <a href="service.html">
-                            <img src="images/gallery/2.jpg" alt="images" className="img-responsive" />
+                            <img src={gallery2} alt="images" className="img-responsive" />
                         </a>
                     </div>
                     <div className="image-content text-center">
@@ -377,7 +387,7 @@ const Homepage = () => {
                 <div className="inner-box">
                     <div className="img_holder">
                         <a href="service.html">
-                            <img src="images/gallery/3.jpg" alt="images" className="img-responsive" />
+                            <img src={gallery3} alt="images" className="img-responsive" />
                         </a>
                     </div>
                     <div className="image-content text-center">
@@ -404,7 +414,7 @@ const Homepage = () => {
         <div className="row">
             <div className="col-md-4 col-sm-6 col-xs-12">
                 <div className="team-member">
-                    <img src="images/team/doctor-2.jpg" alt="doctor" className="img-responsive" />
+                    <img src={doctor2} alt="doctor" className="img-responsive" />
                     <div className="contents text-center">
                         <h4>Dr. Robert Barrethion</h4>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, aspernatur.</p>
@@ -414,7 +424,7 @@ const Homepage = () => {
             </div>
             <div className="col-md-4 col-sm-6 col-xs-12">
                 <div className="team-member">
-                    <img src="images/team/doctor-lab-3.jpg" alt="doctor" className="img-responsive" />
+                    <img src={doctor3} alt="doctor" className="img-responsive" />
                     <div className="contents text-center">
                         <h4>Dr. Marry Lou</h4>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, aspernatur.</p>
@@ -424,7 +434,7 @@ const Homepage = () => {
             </div>
             <div className="col-md-4 col-sm-6 col-xs-12">
                 <div className="team-member">
-                    <img src="images/team/event-2.jpg" alt="doctor" className="img-responsive" />
+                    <img src={event2} alt="doctor" className="img-responsive" />
                     <div className="contents text-center">
                         <h4>Dr. Sansa Stark</h4>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, aspernatur.</p>
@@ -447,7 +457,7 @@ const Homepage = () => {
                 <div className="inner-box text-center">
                     <div className="image-box">
                         <figure>
-                            <img src="images/testimonials/1.png" alt="" />
+                            <img src={testimonial1} alt="" />
                         </figure>
                     </div>
                     <h6>Adam Rose</h6>
@@ -458,7 +468,7 @@ const Homepage = () => {
                 <div className="inner-box text-center">
                     <div className="image-box">
                         <figure>
-                            <img src="images/testimonials/2.png" alt="" />
+                            <img src={testimonial2} alt="" />
                         </figure>
                     </div>
                     <h6>David Warner</h6>
@@ -469,7 +479,7 @@ const Homepage = () => {
                 <div className="inner-box text-center">
                     <div className="image-box">
                         <figure>
-                            <img src="images/testimonials/3.png" alt="" />
+                            <img src={testimonial3} alt="" />
                         </figure>
                     </div>
                     <h6>Amy Adams</h6>
@@ -480,7 +490,7 @@ const Homepage = () => {
                 <div className="inner-box text-center">
                     <div className="image-box">
                         <figure>
-                            <img src="images/testimonials/1.png" alt="" />
+                            <img src={testimonial1} alt="" />
                         </figure>
                     </div>
                     <h6>Adam Rose</h6>
@@ -491,7 +501,7 @@ const Homepage = () => {
                 <div className="inner-box text-center">
                     <div className="image-box">
                         <figure>
-                            <img src="images/testimonials/2.png" alt="" />
+                            <img src={testimonial2} alt="" />
                         </figure>
                     </div>
                     <h6>David Warner</h6>
@@ -502,7 +512,7 @@ const Homepage = () => {
                 <div className="inner-box text-center">
                     <div className="image-box">
                         <figure>
-                            <img src="images/testimonials/3.png" alt="" />
+                            <img src={testimonial3} alt="" />
                         </figure>
                     </div>
                     <h6>Amy Adams</h6>
@@ -513,7 +523,7 @@ const Homepage = () => {
                 <div className="inner-box text-center">
                     <div className="image-box">
                         <figure>
-                            <img src="images/testimonials/1.png" alt="" />
+                            <img src={testimonial1} alt="" />
                         </figure>
                     </div>
                     <h6>Adam Rose</h6>
@@ -524,7 +534,7 @@ const Homepage = () => {
                 <div className="inner-box text-center">
                     <div className="image-box">
                         <figure>
-                            <img src="images/testimonials/2.png" alt="" />
+                            <img src={testimonial2} alt="" />
                         </figure>
                     </div>
                     <h6>David Warner</h6>
@@ -535,7 +545,7 @@ const Homepage = () => {
                 <div className="inner-box text-center">
                     <div className="image-box">
                         <figure>
-                            <img src="images/testimonials/3.png" alt="" />
+                            <img src={testimonial3} alt="" />
                         </figure>
                     </div>
                     <h6>Amy Adams</h6>
