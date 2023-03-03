@@ -1,6 +1,6 @@
 import React from 'react';
 import { Outlet, Link } from 'react-router-dom';
-import FooterWebsite from './FooterWebsite'
+import FooterWebsite from './FooterWebsite';
 import logo from '../images_website/logo.png';
 // t feature1 from '../images_website/images/feature1.png';
 
@@ -44,17 +44,20 @@ const Navbar = () => {
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link text-dark" href="#">Home <span class="sr-only">(current)</span></a>
+                <Link to="/" class="nav-link text-dark" href="#">Home <span class="sr-only">(current)</span></Link>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark" href="#">Features</a>
+                <Link to="/about" class="nav-link text-dark" href="#">About</Link>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark" href="#">Pricing</a>
+                <Link to="/services" class="nav-link text-dark" href="#">Services</Link>
+            </li>
+            <li class="nav-item">
+                <Link to="/contact" class="nav-link text-dark" href="#">Contact</Link>
             </li>
             </ul>
             <span class="navbar-text text-dark">
-                <button className="btn btn-primary btn-lg">Take action</button>
+                <Link to="/login" className="btn btn-primary btn-lg">Patients' Portal</Link>
             </span>
         </div>
     </div>

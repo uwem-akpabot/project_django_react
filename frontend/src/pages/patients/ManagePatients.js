@@ -5,7 +5,7 @@ import axios from 'axios';
 import swal from 'sweetalert';
 import SideComponent_Patient from '../../components/SideComponent_Patient';
 
-const PatientsList = () => {
+const PatientsList = (props) => {
   let [patients, setPatients] = useState([])
   let {authTokens, logoutUser} = useContext(AuthContext)
   
@@ -16,7 +16,7 @@ const PatientsList = () => {
   }, [])
 
   let getPatients = async() => {
-    let response = await fetch('http://localhost:8000/api/patients/', {
+    let response = await fetch('${props.host_url}/patients/', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -58,7 +58,7 @@ const PatientsList = () => {
   const deletePatient = useCallback( async (id)  => {
     if(window.confirm('Are you sure you want to delete?')){
       axios.delete(
-        `http://localhost:8000/api/patients/${id}/delete/`,{
+        `${props.host_url}/patients/${id}/delete/`,{
             method : 'DELETE',
             body : JSON.stringify({
                 id : id

@@ -4,7 +4,7 @@ import axios from 'axios';
 import swal from 'sweetalert';
 import SideComponent_Consultation from '../../components/SideComponent_Consultation';
 
-const AddSoapNote = () => {
+const AddSoapNote = (props) => {
     const {register, handleSubmit, reset, formState: { errors } } = useForm();
     let formData = new FormData();
 
@@ -24,7 +24,7 @@ const AddSoapNote = () => {
             }
         }
         axios.post(
-            `http://localhost:8000/api/soapnotes/create/`,
+            `${props.host_url}/soapnotes/create/`,
             formData,
             requestOptions
         ).then(res => res)

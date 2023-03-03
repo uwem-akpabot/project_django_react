@@ -5,7 +5,7 @@ import axios from 'axios';
 import swal from 'sweetalert';
 import SideComponent_Consultation from '../../components/SideComponent_Consultation';
 
-const ManageSoapNotes = () => {
+const ManageSoapNotes = (props) => {
   let [soapnotes, setSoapNotes] = useState([])
   let {authTokens, logoutUser} = useContext(AuthContext)
   
@@ -16,7 +16,7 @@ const ManageSoapNotes = () => {
   }, [])
 
   let getSoapNotes = async() => {
-    let response = await fetch('http://localhost:8000/api/soapnotes/', {
+    let response = await fetch('${props.host_url}/api/soapnotes/', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -58,7 +58,7 @@ const ManageSoapNotes = () => {
   const deleteBlog = useCallback( async (id)  => {
     if(window.confirm('Are you sure you want to delete this blog post?')){
       axios.delete(
-        `http://localhost:8000/api/patients/${id}/delete/`,{
+        `${props.host_url}/patients/${id}/delete/`,{
             method : 'DELETE',
             body : JSON.stringify({
                 id : id

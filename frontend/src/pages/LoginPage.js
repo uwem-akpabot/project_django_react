@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import AuthContext from '../context/AuthContext';
+import logo from '../images_website/logo.png';
 
 const LoginPage = (props) => {
   let {loginUser} = useContext(AuthContext)
@@ -10,7 +11,17 @@ const LoginPage = (props) => {
       <div class="content-wrapper full-page-wrapper d-flex align-items-center auth login-bg">
         <div class="card col-lg-4 mx-auto">
           <div class="card-body px-5 py-5">
-            <h2 class="text-left mb-3 text-primary">{props.company}</h2>
+            {/* <h2 class="text-left mb-3 text-primary">{props.company}</h2> */}
+            <div className="row">
+              <div className="col-3">
+                <img src={logo} alt="" title="" style={{width:"70px" }} />
+              </div>
+              <div className="col-9">
+              <h2><a href="#" style={{ color:"purple"}}><strong>Beyond's </strong>
+            <br />Healthcare</a></h2>
+              </div>
+            </div>
+            <hr />
             <h2 class="text-left mb-3">Login</h2>
 
             <form onSubmit={loginUser}>

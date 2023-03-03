@@ -4,7 +4,7 @@ import axios from 'axios';
 import swal from 'sweetalert';
 import SideComponent_Consultation from '../../components/SideComponent_Consultation';
 
-const LabRequestForm = () => {
+const LabRequestForm = (props) => {
     const {register, handleSubmit, reset, formState: { errors } } = useForm();
     let formData = new FormData();
 
@@ -25,7 +25,7 @@ const LabRequestForm = () => {
             }
         }
         axios.post(
-            `http://localhost:8000/api/patients/create/`,
+            `${props.host_url}/patients/create/`,
             formData,
             requestOptions
         ).then(res => res)
